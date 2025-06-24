@@ -1,0 +1,44 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+	<section class="fs-display-flex fs-flex-direction-column">
+		<header class="panel panel-primary">
+			<div class="panel-footer">Televendas</div>
+		</header>
+	</section>
+	
+	<section class="fs-sm-padding-left fs-display-flex fs-flex-direction-column">
+		<span>Informações do Pedido Realizado pelo Televendas</span>
+		<section class="fs-md-margin-top fs-md-margin-bottom fs-display-flex fs-flex-direction-row fs-flex-wrap-wrap" name="containerTelevenda">
+			<div class="form-group col-md-4">
+				<label for="dataVenda">Data da venda:</label>
+				<input type="date" name="dataVenda" id="dataVenda" class="form-control" placeholder="01/01/2025" />
+			</div>
+
+			<div class="form-group col-md-4">
+				<label for="valorVenda">Valor da venda:</label>
+				<input type="text" name="valorVenda" id="valorVenda" class="form-control" mask="#00.000.000.000.000,00" placeholder="100.000,00" />
+			</div>
+
+			<div class="form-group col-md-4">
+				<label for="formaPagamentoVenda">Forma de pagamento da venda:</label>
+				<select class="form-control" name="formaPagamentoVenda">
+					<option>Débito</option>
+					<option>Crédito</option>
+					<option>Pix</option>
+				</select>
+			</div>
+		</section>
+	</section>
+</form>
+</div>
+</body>
+</html>

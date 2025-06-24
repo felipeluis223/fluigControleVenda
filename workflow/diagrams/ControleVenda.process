@@ -2276,7 +2276,7 @@
     <fonts name="Arial" size="8"/>
     <fonts name="Arial" size="8" bold="true"/>
   </pi:Diagram>
-  <bpmn2:BpmnProcess id="controleVenda" name="controleVenda" serverId="Academy Fluig" version="1" author="" extendedFields="&lt;list/>" formSource="server" category="" volume="Default" expedient="Default" instruction="" keyWord="" complementsLevel="1" notifyResponsibleComplements="true" notifyRequisitionerComplements="true"/>
+  <bpmn2:BpmnProcess id="controleVenda" name="controleVenda" serverId="Academy Fluig" version="1" author="" extendedFields="&lt;list/>" formSource="server" category="Televenda" volume="Default" expedient="Default" instruction="" keyWord="" complementsLevel="1" notifyResponsibleComplements="true" notifyRequisitionerComplements="true"/>
   <bpmn2:BpmnStartEvent id="startevent1" name="In&#xed;cio" outgoing="flow3" type="10" signalId="0" expediente="" selecionaColaboradores="1" esforcoCalculo="0"/>
   <bpmn2:BpmnTask id="task2" name="Verificar Pagamento" incoming="flow3" outgoing="flow11" type="80" loopType="0" authNotify="true" expediente="" selecionaColaboradores="1" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
   <bpmn2:SequenceFlow id="flow3" name="" sourceRef="startevent1" targetRef="task2" permiteRetorno="true" atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/>"/>
