@@ -11,24 +11,22 @@
 <form name="form" role="form">
 	<section class="fs-display-flex fs-flex-direction-column">
 		<header class="panel panel-primary">
-			<div class="panel-footer"><h2>Televendas</h2></div>
+			<div class="panel-footer"><h2>Televenda</h2></div>
 		</header>
 	</section>
 	
 	<section class="fs-sm-padding-left fs-display-flex fs-flex-direction-column">
-
-		<span>Informações do Pedido Realizado pelo Televendas</span>
-		<section class="fs-md-margin-top fs-md-margin-bottom fs-display-flex fs-flex-direction-row fs-flex-wrap-wrap" name="containerTelevenda">
+		<h3>Etapa da Venda</h3>
+		<span>Apresenta os principais dados do pedido realizado, permitindo acompanhar o status, produtos solicitados e condições acordadas</span>
+		<section class="fs-md-margin-top fs-md-margin-bottom fs-display-flex fs-flex-direction-row fs-flex-wrap-wrap" name="containerVenda">
 			<div class="form-group col-md-4">
 				<label for="dataVenda">Data da venda:</label>
 				<input type="date" name="dataVenda" id="dataVenda" class="form-control" placeholder="01/01/2025" />
 			</div>
-
 			<div class="form-group col-md-4">
 				<label for="valorVenda">Valor da venda R$:</label>
 				<input type="text" name="valorVenda" id="valorVenda" class="form-control" mask="#00.000.000.000.000,00" placeholder="100.000,00" />
 			</div>
-
 			<div class="form-group col-md-4">
 				<label for="formaPagamentoVenda">Forma de pagamento da venda:</label>
 				<select class="form-control" name="formaPagamentoVenda">
@@ -37,18 +35,38 @@
 					<option>Pix</option>
 				</select>
 			</div>
-
 			<!-- Lembrando que essa div teve quebra de linha - No maximo col-12 -->
 			<div class="form-group col-md-12">
-				<label for="obsTelevenda">Observação:</label>
-				<textarea class="form-control" name="obsTelevenda" rows="3"></textarea>
+				<label for="obsVenda">Observação:</label>
+				<textarea class="form-control" name="obsVenda" rows="3"></textarea>
+			</div>
+		</section>
+
+
+		<h3>Etapa do Financeiro</h3>
+		<span>Exibe todos os dados relacionados ao faturamento, condições de pagamento, prazos e valores envolvidos na transação</span>
+		<section class="fs-md-margin-top fs-md-margin-bottom fs-display-flex fs-flex-direction-row fs-flex-wrap-wrap" name="containerFinanceiro">
+			
+			<div class="form-group col-md-2">
+				<label>Pagamento Efetuado:</label>
+				<div class="fs-display-flex fs-flex-direction-column fs-xs-gap">
+					<div class="custom-radio custom-radio-success">
+						<input type="radio" name="radioTypes" value="success" id="radioPermitido">
+						<label for="radioPermitido">Autorizado</label>
+					</div>
+					<div class="custom-radio custom-radio-danger">
+						<input type="radio" name="radioTypes" value="danger" id="radioNegado">
+						<label for="radioNegado">Não Autorizado</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group col-md-6">
+				<label for="obsFinanceiro">Observação/Justificativa ou Anexar comprovante:</label>
+				<textarea class="form-control" name="obsFinanceiro" rows="3"></textarea>
 			</div>
 
 		</section>
-
-		<!-- <section class="fs-md-margin-top fs-md-margin-bottom fs-display-flex fs-flex-direction-row fs-flex-wrap-wrap" name="containerTelevendaObs">
-			
-		</section> -->
 
 	</section>
 </form>
