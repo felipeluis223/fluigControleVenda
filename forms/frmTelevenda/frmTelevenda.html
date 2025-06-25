@@ -19,19 +19,23 @@
 		<h3>Etapa da Venda</h3>
 		<span>Apresenta os principais dados do pedido realizado, permitindo acompanhar o status, produtos solicitados e condições acordadas</span>
 		<section class="fs-md-margin-top fs-md-margin-bottom fs-display-flex fs-flex-direction-row fs-flex-wrap-wrap" name="containerVenda">
-			<div class="form-group col-md-3">
+			<div class="form-group col-md-6">
+				<label for="nomeRespVenda">Nome do responsável:</label>
+				<input type="text" name="nomeRespVenda" id="nomeRespVenda" class="form-control" placeholder="Ex.: Luis Felipe Bueno" />
+			</div>
+			<div class="form-group col-md-6">
 				<label for="dataVenda">Data da venda:</label>
 				<input type="date" name="dataVenda" id="dataVenda" class="form-control" placeholder="01/01/2025" />
 			</div>
-			<div class="form-group col-md-3">
+			<div class="form-group col-md-4">
 				<label for="valorVenda">Valor da venda R$:</label>
 				<input type="text" name="valorVenda" id="valorVenda" class="form-control" mask="#00.000.000.000.000,00" placeholder="100.000,00" />
 			</div>
-			<div class="form-group col-md-3">
+			<div class="form-group col-md-4">
 				<label for="formaPagamentoVenda">Forma de pagamento da venda:</label>
 				<select class="form-control" name="formaPagamentoVenda" dataset="dsFormaPagamento" datasetkey="ID" datasetvalue="Describle"></select>
 			</div>
-			<div class="form-group col-md-3">
+			<div class="form-group col-md-4">
 				<label for="lojaResponsavel">Loja Responsável:</label>
 				<select class="form-control" name="lojaResponsavel" dataset="dsLojas" datasetkey="ID" datasetvalue="Nome"></select>
 			</div>
@@ -47,6 +51,15 @@
 		<h3>Etapa do Financeiro</h3>
 		<span>Exibe todos os dados relacionados ao faturamento, condições de pagamento, prazos e valores envolvidos na transação</span>
 		<section class="fs-md-margin-top fs-md-margin-bottom fs-display-flex fs-flex-direction-row fs-flex-wrap-wrap" name="containerFinanceiro">
+			<div class="form-group col-md-6">
+				<label for="nomeRespFinanceiro">Nome do responsável:</label>
+				<input type="text" name="nomeRespFinanceiro" id="nomeRespFinanceiro" class="form-control" placeholder="Ex.: Luis Felipe Bueno" />
+			</div>
+			<div class="form-group col-md-6">
+				<label for="dataFinanceiro">Data da validação:</label>
+				<input type="date" name="dataFinanceiro" id="dataFinanceiro" class="form-control" placeholder="01/01/2025" />
+			</div>
+
 			<div class="form-group col-md-2">
 				<label>Pagamento Efetuado:</label>
 				<div class="fs-display-flex fs-flex-direction-column fs-xs-gap">
@@ -60,7 +73,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="form-group col-md-6">
+			<div class="form-group col-md-10">
 				<label for="obsFinanceiro">Observação/Justificativa ou Anexar comprovante:</label>
 				<textarea class="form-control" name="obsFinanceiro" rows="3"></textarea>
 			</div>
