@@ -7,7 +7,7 @@ function displayFields(form,customHTML){
     
     // Percorrendo os grupos do usuário e armazenando conforme a necessidade:
     var userGroup = {};
-    for(var index=0; index<=groupDataset.rowsCount; index++){
+    for(var index=0; index<groupDataset.rowsCount; index++){
         var groupId = groupDataset.getValue(index, "colleagueGroupPK.groupId");
         for (var i=0; i<groups.length; i++){
             if(groupId == groups[i]){
@@ -16,13 +16,13 @@ function displayFields(form,customHTML){
         };
     };
 
-    // Desabilitando todos inputs:
+    // // Desabilitando todos inputs:
     var allFields = ["nomeRespVenda","dataVenda","valorVenda",
         "formaPagamentoVenda","lojaResponsavel","obsVenda","nomeRespFinanceiro",
         "dataFinanceiro","radioTypes","obsFinanceiro","checkboxVisto"];
     
     for(var index=0; index<allFields.length; index++){
-        form.setEnabled(allFIelds[index], false);
+        form.setEnabled(allFields[index], false);
     };
         
     // Se o usuário for do grupo de vendas - habilita os campos de venda:
@@ -31,15 +31,20 @@ function displayFields(form,customHTML){
         form.setValue("nomeRespVenda", user);
         form.setEnabled("nomeRespVenda", false);
 
-        form.Enabled("dataVenda", true);
-        form.Enabled("valorVenda", true);
-        form.Enabled("formaPagamentoVenda", true);
-        form.Enabled("lojaResponsavel", true);
-        form.Enabled("obsVenda", true);
+        form.setEnabled("dataVenda", true);
+        form.setEnabled("valorVenda", true);
+        form.setEnabled("formaPagamentoVenda", true);
+        form.setEnabled("lojaResponsavel", true);
+        form.setEnabled("obsVenda", true);
         
         // Verificando se já passou pelo setor do financeiro e habilitando para edição:
-        if((form.getValue("radioTypes") =="success") || (form.getValue("radioTypes") =="danger")){
-            form.setEnabled("obsVenda", true);
+        if((form.getValue("radioTypes") == "success") || (form.getValue("radioTypes") == "danger")){
+            form.setEnabled("checkboxVisto", true);
+            form.setEnabled("dataVenda", false);
+            form.setEnabled("valorVenda", false);
+            form.setEnabled("formaPagamentoVenda", false);
+            form.setEnabled("lojaResponsavel", false);
+            form.setEnabled("obsVenda", false);
         }
     }
 

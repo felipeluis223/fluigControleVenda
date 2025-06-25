@@ -28,10 +28,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>controleVenda</processId>
-      <version>1</version>
+      <version>3</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
-    <formId>0</formId>
+    <formId>200</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
@@ -59,8 +59,8 @@
       <deadlineTime>0</deadlineTime>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
-      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;grpVendas&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>true</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -110,6 +110,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;grpFinanceiro&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -160,6 +162,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;1&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -210,6 +214,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;1&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -260,6 +266,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;grpFinanceiro&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -369,7 +377,36 @@
       <digitalSignature>false</digitalSignature>
     </ProcessState>
   </list>
-  <list/>
+  <list>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>controleVenda</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>3</version>
+        <sequence>10</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;radioTypes&quot;) == &quot;success&quot;</condition>
+      <destinationSequenceId>18</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;grpFinanceiro&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>controleVenda</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>3</version>
+        <sequence>10</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;radioTypes&quot;) == &quot;danger&quot;</condition>
+      <destinationSequenceId>13</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;grpFinanceiro&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+  </list>
   <list>
     <ProcessLink>
       <processLinkPK>
@@ -413,7 +450,7 @@
         <linkSequence>11</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
-      <returnPermited>true</returnPermited>
+      <returnPermited>false</returnPermited>
       <initialStateSequence>2</initialStateSequence>
       <finalStateSequence>10</finalStateSequence>
       <returnLabel></returnLabel>
@@ -447,7 +484,7 @@
         <linkSequence>19</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
-      <returnPermited>true</returnPermited>
+      <returnPermited>false</returnPermited>
       <initialStateSequence>10</initialStateSequence>
       <finalStateSequence>18</finalStateSequence>
       <returnLabel></returnLabel>
