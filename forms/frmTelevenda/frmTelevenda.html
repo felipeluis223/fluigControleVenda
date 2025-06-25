@@ -46,7 +46,6 @@
 		<h3>Etapa do Financeiro</h3>
 		<span>Exibe todos os dados relacionados ao faturamento, condições de pagamento, prazos e valores envolvidos na transação</span>
 		<section class="fs-md-margin-top fs-md-margin-bottom fs-display-flex fs-flex-direction-row fs-flex-wrap-wrap" name="containerFinanceiro">
-			
 			<div class="form-group col-md-2">
 				<label>Pagamento Efetuado:</label>
 				<div class="fs-display-flex fs-flex-direction-column fs-xs-gap">
@@ -60,14 +59,21 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="form-group col-md-6">
 				<label for="obsFinanceiro">Observação/Justificativa ou Anexar comprovante:</label>
 				<textarea class="form-control" name="obsFinanceiro" rows="3"></textarea>
 			</div>
-
 		</section>
+		
 
+		<h3>Visualização e Confirmação</h3>
+		<span>Efetuar a validação e assegurar que o retorno do setor financeiro foi recebido:</span>
+		<section class="fs-md-margin-top fs-md-margin-bottom fs-display-flex fs-flex-direction-column fs-flex-wrap-wrap" name="containerConfirmar">
+			<div class="custom-checkbox custom-checkbox-success">
+				<input type="checkbox" id="checkboxVisto" name="checkboxVisto">
+				<label for="checkboxVisto">Visto</label>
+			</div>
+		</section>
 	</section>
 </form>
 </div>
