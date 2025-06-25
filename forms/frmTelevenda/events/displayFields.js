@@ -36,7 +36,20 @@ function displayFields(form,customHTML){
         form.Enabled("formaPagamentoVenda", true);
         form.Enabled("lojaResponsavel", true);
         form.Enabled("obsVenda", true);
+        
+        // Verificando se já passou pelo setor do financeiro e habilitando para edição:
+        if((form.getValue("radioTypes") =="success") || (form.getValue("radioTypes") =="danger")){
+            form.setEnabled("obsVenda", true);
+        }
     }
 
+    if("grpFinanceiro" in userGroup){
+        user = getValue("WKUser");
+        form.setValue("nomeRespFinanceiro", user);
+        form.setEnabled("nomeRespFinanceiro", false);
 
+        form.setEnabled("dataFinanceiro", true);
+        form.setEnabled("radioTypes", true);
+        form.setEnabled("obsFinanceiro", true);
+    }
 }
