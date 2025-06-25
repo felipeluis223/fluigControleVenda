@@ -3,7 +3,7 @@ function displayFields(form,customHTML){
     var user = getValue("WKUser");
     var constraints = [ DatasetFactory.createConstraint("colleagueGroupPK.colleagueId", user, user, ConstraintType.MUST) ];
     var groupDataset = DatasetFactory.getDataset("colleagueGroup", null, constraints, null);
-    var groups = [ "grpLoja1", "grpLoja2", "grpLoja3", "grpTI", "grpFinanceiro", "grpVendas"];
+    var groups = [ "grpVendas", "grpFinanceiro" ];
     
     // Percorrendo os grupos do usuário e armazenando conforme a necessidade:
     var userGroup = {};
