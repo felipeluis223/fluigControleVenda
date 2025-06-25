@@ -303,8 +303,8 @@
         <version>1</version>
         <sequence>10</sequence>
       </processStatePK>
-      <stateName>Status do Pagamento</stateName>
-      <stateDescription>Status do Pagamento</stateDescription>
+      <stateName>Status</stateName>
+      <stateDescription>Status</stateDescription>
       <joint>false</joint>
       <initialState>false</initialState>
       <transferAttachments>false</transferAttachments>
@@ -312,7 +312,7 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>310</positionX>
-      <positionY>414</positionY>
+      <positionY>420</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>

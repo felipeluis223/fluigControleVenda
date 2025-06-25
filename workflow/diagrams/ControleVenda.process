@@ -75,7 +75,7 @@
       </anchors>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
-      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="60" height="124" x="310" y="414">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="60" height="92" x="310" y="420">
         <graphicsAlgorithmChildren xsi:type="al:Polygon" lineWidth="1" filled="true" transparency="0.0" width="60" height="60" style="/0/@styles.54">
           <points y="30"/>
           <points x="30"/>
@@ -95,7 +95,7 @@
         <graphicsAlgorithm xsi:type="al:Ellipse" filled="false" lineVisible="false"/>
       </anchors>
       <children visible="true">
-        <graphicsAlgorithm xsi:type="al:MultiText" lineWidth="1" filled="false" lineVisible="true" transparency="0.0" width="60" height="64" y="60" style="/0/@styles.55" font="/0/@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="Status&#xA;do&#xA;Pa...&#xA;"/>
+        <graphicsAlgorithm xsi:type="al:MultiText" lineWidth="1" filled="false" lineVisible="true" transparency="0.0" width="60" height="32" y="60" style="/0/@styles.55" font="/0/@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="Status&#xA;"/>
       </children>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
@@ -2283,7 +2283,7 @@
   <bpmn2:BpmnTask id="task6" name="Venda Autorizada" incoming="flow20" outgoing="flow9" type="80" loopType="0" authNotify="true" expediente="" selecionaColaboradores="1" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
   <bpmn2:BpmnEndEvent id="endevent8" name="Fim" incoming="flow9 flow15" type="60" signalId="0"/>
   <bpmn2:SequenceFlow id="flow9" name="" sourceRef="task6" targetRef="endevent8" atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/>"/>
-  <bpmn2:BpmnGateway id="exclusivegateway10" name="Status do Pagamento" incoming="flow11" outgoing="flow19 flow21" type="120" condition="&lt;list/>"/>
+  <bpmn2:BpmnGateway id="exclusivegateway10" name="Status" incoming="flow11" outgoing="flow19 flow21" type="120" condition="&lt;list/>"/>
   <bpmn2:SequenceFlow id="flow11" name="" sourceRef="task2" targetRef="exclusivegateway10" permiteRetorno="true" atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/>"/>
   <bpmn2:BpmnTask id="task13" name="Venda n&#xe3;o autorizada" incoming="flow21" outgoing="flow15" type="80" loopType="0" authNotify="true" expediente="" selecionaColaboradores="1" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
   <bpmn2:SequenceFlow id="flow15" name="" sourceRef="task13" targetRef="endevent8" atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/>"/>
