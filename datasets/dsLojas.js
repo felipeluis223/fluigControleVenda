@@ -15,5 +15,4 @@ function createDataset(fields, constraints, sortFields) {
     ds.addRow(data[2]);
 
     return ds;
-
 }
