@@ -19,7 +19,7 @@ function displayFields(form,customHTML){
     // // Desabilitando todos inputs:
     var allFields = ["nomeRespVenda","dataVenda","valorVenda",
         "formaPagamentoVenda","lojaResponsavel","obsVenda","nomeRespFinanceiro",
-        "dataFinanceiro","radioTypes","obsFinanceiro","checkboxVisto"];
+        "dataFinanceiro","radioTypes","obsFinanceiro","uploadFile", "checkboxVisto"];
     
     for(var index=0; index<allFields.length; index++){
         form.setEnabled(allFields[index], false);
@@ -56,5 +56,6 @@ function displayFields(form,customHTML){
         form.setEnabled("dataFinanceiro", true);
         form.setEnabled("radioTypes", true);
         form.setEnabled("obsFinanceiro", true);
+        form.setEnabled("uploadFile", true);
     }
 }
