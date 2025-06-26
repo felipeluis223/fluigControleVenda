@@ -25,7 +25,6 @@ function displayFields(form,customHTML){
         form.setEnabled(allFields[index], false);
     };
 
-        
     // Se o usuário for do grupo de vendas - habilita os campos de venda:
     if("grpVendas" in userGroup){
         user = getValue("WKUser");
@@ -58,9 +57,6 @@ function displayFields(form,customHTML){
         form.setEnabled("radioTypes", true);
         form.setEnabled("obsFinanceiro", true);
     }
-    
-    // Client-side para mostrar/habilitar campo de parcelas de acordo com a forma do pagamento:
-
 
     // Client-side para mostrar/habilitar lembrete do uploadFile com base no radioButton:
     customHTML.append("<script>");
