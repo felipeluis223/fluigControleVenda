@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>controleVenda</processId>
-      <version>6</version>
+      <version>7</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>200</formId>
@@ -331,13 +331,13 @@
         <companyId>1</companyId>
         <processId>controleVenda</processId>
         <expressionOrder>1</expressionOrder>
-        <version>6</version>
+        <version>7</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;radioTypes&quot;) == &quot;success&quot;</condition>
       <destinationSequenceId>6</destinationSequenceId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;grpFinanceiro&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
-      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;1&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
     <ConditionProcessState>
@@ -345,7 +345,7 @@
         <companyId>1</companyId>
         <processId>controleVenda</processId>
         <expressionOrder>2</expressionOrder>
-        <version>6</version>
+        <version>7</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;radioTypes&quot;) == &quot;danger&quot;</condition>

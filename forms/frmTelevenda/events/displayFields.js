@@ -62,7 +62,6 @@ function displayFields(form,customHTML){
     // Client-side para mostrar/habilitar uploadFile com base no radioButton:
     customHTML.append("<script>");
     customHTML.append("$(document).ready(function() {");
-
     customHTML.append("  function toggleUploadField() {");
     customHTML.append("    var valorSelecionado = $('input[name=radioTypes]:checked').val();");
     customHTML.append("    if (valorSelecionado === 'success') {");
