@@ -14,7 +14,6 @@ function createDataset(fields, constraints, sortFields) {
     ds.addColumn("ID");
     ds.addColumn("Describle");
 
-
     // Declarando linhas dos Datasets:
     ds.addRow(data[0]);
     ds.addRow(data[1]);
