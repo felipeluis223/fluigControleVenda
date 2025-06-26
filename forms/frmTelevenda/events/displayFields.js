@@ -59,9 +59,13 @@ function displayFields(form,customHTML){
         form.setEnabled("obsFinanceiro", true);
     }
     
+    // Client-side para mostrar/habilitar campo de parcelas de acordo com a forma do pagamento:
+
+
     // Client-side para mostrar/habilitar lembrete do uploadFile com base no radioButton:
     customHTML.append("<script>");
     customHTML.append("$(document).ready(function() {");
+
     customHTML.append("  function toggleUploadField() {");
     customHTML.append("    var valorSelecionado = $('input[name=radioTypes]:checked').val();");
     customHTML.append("    if (valorSelecionado === 'success') {");
@@ -72,8 +76,26 @@ function displayFields(form,customHTML){
     customHTML.append("      $('#uploadFile').prop('disabled', true);");
     customHTML.append("    }");
     customHTML.append("  }");
+
+    customHTML.append("  function toggleParcelasField() {");
+    customHTML.append("    var formaPagamento = $('#formaPagamentoVenda').val();");
+    customHTML.append("    if (formaPagamento === '1002') {");
+    customHTML.append("      $('#containerParcelas').show();");
+    customHTML.append("      $('#qtdeParcelas').prop('disabled', false);");
+    customHTML.append("    } else {");
+    customHTML.append("      $('#containerParcelas').hide();");
+    customHTML.append("      $('#qtdeParcelas').prop('disabled', true);");
+    customHTML.append("    }");
+    customHTML.append("  }");
+
+    customHTML.append("  toggleParcelasField();");
     customHTML.append("  toggleUploadField();");
+
+    customHTML.append("  $('#formaPagamentoVenda').on('change', toggleParcelasField);");
     customHTML.append("  $('input[name=radioTypes]').on('change', toggleUploadField);");
+
     customHTML.append("});");
     customHTML.append("</script>");
+
+
 }

@@ -2,9 +2,9 @@ function createDataset(fields, constraints, sortFields) {
     
     // Declarando formas de pagamento:
     var data = [
-        [ 1001, "Débito" ],
-        [ 1002, "Crédito" ],
-        [ 1003, "Pix" ]
+        [ "1001", "Débito" ],
+        [ "1002", "Crédito" ],
+        [ "1003", "Pix" ]
     ];
 
     // Declarando Dataset:

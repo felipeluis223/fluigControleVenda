@@ -19,28 +19,41 @@
 		<h3>Etapa da Venda</h3>
 		<span>Apresenta os principais dados do pedido realizado, permitindo acompanhar o status, produtos solicitados e condições acordadas</span>
 		<section class="fs-md-margin-top fs-md-margin-bottom fs-display-flex fs-flex-direction-row fs-flex-wrap-wrap" name="containerVenda">
+			<!-- 1º Linha -->
 			<div class="form-group col-md-6">
 				<label for="nomeRespVenda">Nome do responsável:</label>
 				<input type="text" name="nomeRespVenda" id="nomeRespVenda" class="form-control" placeholder="Ex.: Luis Felipe Bueno" />
 			</div>
-			<div class="form-group col-md-6">
+			<div class="form-group col-md-3">
 				<label for="dataVenda">Data da venda:</label>
 				<input type="date" name="dataVenda" id="dataVenda" class="form-control" placeholder="01/01/2025" />
 			</div>
+			<div class="form-group col-md-3">
+				<label for="lojaResponsavel">Loja Responsável:</label>
+				<select class="form-control" name="lojaResponsavel" dataset="dsLojas" datasetkey="ID" datasetvalue="Nome"></select>
+			</div>
+			<!-- 2º Linha -->
 			<div class="form-group col-md-4">
 				<label for="valorVenda">Valor da venda R$:</label>
 				<input type="text" name="valorVenda" id="valorVenda" class="form-control" mask="#00.000.000.000.000,00" placeholder="100.000,00" />
 			</div>
 			<div class="form-group col-md-4">
 				<label for="formaPagamentoVenda">Forma de pagamento da venda:</label>
-				<select class="form-control" name="formaPagamentoVenda" dataset="dsFormaPagamento" datasetkey="ID" datasetvalue="Describle"></select>
+				<select class="form-control" id="formaPagamentoVenda" name="formaPagamentoVenda" dataset="dsFormaPagamento" datasetkey="ID" datasetvalue="Describle"></select>
 			</div>
-			<div class="form-group col-md-4">
-				<label for="lojaResponsavel">Loja Responsável:</label>
-				<select class="form-control" name="lojaResponsavel" dataset="dsLojas" datasetkey="ID" datasetvalue="Nome"></select>
+			<div id="containerParcelas" class="form-group col-md-4" style="display: none;">
+				<label for="qtdeParcelas">Quantidade de parcelas:</label>
+				<select class="form-control" name="qtdeParcelas" id="qtdeParcelas">
+					<option value="1">1x sem juros</option>
+					<option value="2">2x sem juros</option>
+					<option value="3">3x sem juros</option>
+					<option value="4">4x sem juros</option>
+					<option value="5">5x sem juros</option>
+				</select>
 			</div>
 
-			<!-- Lembrando que essa div teve quebra de linha - No maximo col-12 -->
+
+			<!-- 3º Linha -->
 			<div class="form-group col-md-12">
 				<label for="obsVenda">Observação:</label>
 				<textarea class="form-control" name="obsVenda" rows="3"></textarea>
