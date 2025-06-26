@@ -76,6 +76,4 @@ function displayFields(form,customHTML){
     customHTML.append("  $('input[name=radioTypes]').on('change', toggleUploadField);");
     customHTML.append("});");
     customHTML.append("</script>");
-
-
 }

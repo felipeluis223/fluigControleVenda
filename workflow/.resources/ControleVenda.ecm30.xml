@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>controleVenda</processId>
-      <version>7</version>
+      <version>8</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>200</formId>
@@ -331,7 +331,7 @@
         <companyId>1</companyId>
         <processId>controleVenda</processId>
         <expressionOrder>1</expressionOrder>
-        <version>7</version>
+        <version>8</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;radioTypes&quot;) == &quot;success&quot;</condition>
@@ -345,7 +345,7 @@
         <companyId>1</companyId>
         <processId>controleVenda</processId>
         <expressionOrder>2</expressionOrder>
-        <version>7</version>
+        <version>8</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;radioTypes&quot;) == &quot;danger&quot;</condition>
