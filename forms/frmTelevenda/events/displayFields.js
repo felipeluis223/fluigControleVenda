@@ -59,7 +59,7 @@ function displayFields(form,customHTML){
         form.setEnabled("obsFinanceiro", true);
     }
     
-    // Client-side para mostrar/habilitar uploadFile com base no radioButton:
+    // Client-side para mostrar/habilitar lembrete do uploadFile com base no radioButton:
     customHTML.append("<script>");
     customHTML.append("$(document).ready(function() {");
     customHTML.append("  function toggleUploadField() {");
