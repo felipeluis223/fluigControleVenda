@@ -19,11 +19,12 @@ function displayFields(form,customHTML){
     // // Desabilitando todos inputs:
     var allFields = ["nomeRespVenda","dataVenda","valorVenda",
         "formaPagamentoVenda","lojaResponsavel","obsVenda","nomeRespFinanceiro",
-        "dataFinanceiro","radioTypes","obsFinanceiro","uploadFile", "checkboxVisto"];
+        "dataFinanceiro","radioTypes","obsFinanceiro", "checkboxVisto"];
     
     for(var index=0; index<allFields.length; index++){
         form.setEnabled(allFields[index], false);
     };
+
         
     // Se o usuário for do grupo de vendas - habilita os campos de venda:
     if("grpVendas" in userGroup){
@@ -56,6 +57,26 @@ function displayFields(form,customHTML){
         form.setEnabled("dataFinanceiro", true);
         form.setEnabled("radioTypes", true);
         form.setEnabled("obsFinanceiro", true);
-        form.setEnabled("uploadFile", true);
     }
+    
+    // Client-side para mostrar/habilitar uploadFile com base no radioButton:
+    customHTML.append("<script>");
+    customHTML.append("$(document).ready(function() {");
+
+    customHTML.append("  function toggleUploadField() {");
+    customHTML.append("    var valorSelecionado = $('input[name=radioTypes]:checked').val();");
+    customHTML.append("    if (valorSelecionado === 'success') {");
+    customHTML.append("      $('#containerUpload').show();");
+    customHTML.append("      $('#uploadFile').prop('disabled', false);");
+    customHTML.append("    } else {");
+    customHTML.append("      $('#containerUpload').hide();");
+    customHTML.append("      $('#uploadFile').prop('disabled', true);");
+    customHTML.append("    }");
+    customHTML.append("  }");
+    customHTML.append("  toggleUploadField();");
+    customHTML.append("  $('input[name=radioTypes]').on('change', toggleUploadField);");
+    customHTML.append("});");
+    customHTML.append("</script>");
+
+
 }
