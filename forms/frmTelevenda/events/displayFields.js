@@ -45,6 +45,7 @@ function displayFields(form,customHTML){
             form.setEnabled("formaPagamentoVenda", false);
             form.setEnabled("lojaResponsavel", false);
             form.setEnabled("obsVenda", false);
+            form.setEnabled("qtdeParcelas", false);
         }
     }
 
@@ -56,6 +57,7 @@ function displayFields(form,customHTML){
         form.setEnabled("dataFinanceiro", true);
         form.setEnabled("radioTypes", true);
         form.setEnabled("obsFinanceiro", true);
+        form.setEnabled("qtdeParcelas", false);
     }
 
     // Client-side para mostrar/habilitar lembrete do uploadFile com base no radioButton:
